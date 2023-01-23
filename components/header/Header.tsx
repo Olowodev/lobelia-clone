@@ -1,12 +1,15 @@
 import Navbar from "../navbar/Navbar";
-import Slideshow from "../slideshow/Slideshow";
 
 const Header = () => {
     return (
         <div>
             <div>
                 <Navbar />
-                <Slideshow />
+                <div>
+                    <video></video>
+                    <video></video>
+                    <h1>Earth observation to address the climate emergency.</h1>
+                </div>
             </div>
         </div>
     );

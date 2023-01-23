@@ -1,12 +1,12 @@
+import styles from 'Marquee.module.css'
+
 const Marquee = () => {
     return (
         <div>
             <div>
                 <div>
-                    <p>A <span>Reusable</span> Way of Living.</p>
-                    <p>A <span>Reusable</span> Way of Living.</p>
-                    <p>A <span>Reusable</span> Way of Living.</p>
-                    <p>A <span>Reusable</span> Way of Living.</p>
+                    <div><span>Earth - Ocean - Soil -Air -</span></div>
+                    <div><span>Earth - Ocean - Soil -Air -</span></div>
                 </div>
             </div>
         </div>
