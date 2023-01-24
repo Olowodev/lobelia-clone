@@ -15,6 +15,7 @@ const Carousel = (props: any) => {
     // const [transLeftOffset, setTransLeftOffset] = useState(null)
 
     const cRef = useRef<HTMLDivElement>(null)
+    const isFirstRender = useRef(true)
     const cWrapperStyle = {
         width: `${props._data.length * (props.itemWidth + (2 * props.itemSideOffsets))}px`,
         height: `${props.itemHeight}px`
@@ -50,7 +51,7 @@ const Carousel = (props: any) => {
 
         const _startX = carousel?.offsetLeft && e.pageX - carousel?.offsetLeft
         const _transLeftOffset = getMeIntValOf(carousel?.firstChild?.style.transform)
-        console.log(carousel?.firstChild?.style)
+        console.log(carousel.firstChild)
         setPageX(e.pageX)
         setState({
             isDown: true,
@@ -81,16 +82,22 @@ const Carousel = (props: any) => {
     }
 
     useEffect(()=> {
+
+        if (isFirstRender.current) {
+            isFirstRender.current = false
+            return
+        } else {
         const {startX, transLeftOffset, dragSpeed} = state
         const carousel = cRef.current
 
         const x = carousel?.offsetLeft && pageX - carousel?.offsetLeft
         const walk = x && (x - startX) * dragSpeed
-
+        console.log(startX)
         carousel.firstChild.style.cssText = `
             transform: translateX(${transLeftOffset + walk}px);
             transition: transform 0.0s ease-in-out;
         `;
+        }
     }, [state])
     return (
         <div
