@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from '../components/header/Header'
 import Projects from '../components/projects/Projects'
+import Services from '../components/services/Services'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
       <div>
           <Header />
+          <Services />
       </div>
     {/* <Projects /> */}
       {/* <main className={styles.main}>

@@ -1,14 +1,15 @@
 import Navbar from "../navbar/Navbar";
+import styles from './Header.module.css'
 
 const Header = () => {
     return (
-        <div>
-            <div>
+        <div className={styles.header}>
+            <div className={styles.headCont}>
                 <Navbar />
-                <div>
+                <div className={styles.headContent}>
                     <video></video>
                     <video></video>
-                    <h1>Earth observation to address the climate emergency.</h1>
+                    <h4>Earth observation to address the climate emergency.</h4>
                 </div>
             </div>
         </div>

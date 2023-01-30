@@ -1,0 +1,15 @@
+.headContent {
+    position: relative;
+}
+
+.headContent video {
+    position: absolute;
+}
+
+.headContent h4 {
+    padding: 12vw 14vw 14vw;
+    font-size: 106px;
+    letter-spacing: -.01em;
+    font-family: 'Canela Web';
+    line-height: 1em;
+}
